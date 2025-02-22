@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,225 @@
     <script src="js/script.js"></script>
     <title>Book a flight</title>
 </head>
+
 <body>
-    
+    <header>
+        <nav class="main-nav">
+            <ul>
+                <li>Corporate clients</li>
+                <li>Flight tickets</li>
+                <li>Information</li>
+                <li>English</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>The best flight tickets for the lowest prices</h1>
+        <div class="ticket-type-wrapper">
+            <ul>
+                <li>Flight tickets</li>
+                <li>Train tickets</li>
+                <li>Bus tickets</li>
+                <li>Hotels</li>
+                <li>Insurance</li>
+            </ul>
+        </div>
+        <section class="ticket-search">
+            <div class="ticket-search-wrapper">
+                <form action="">
+                    <input type="text" id="from" placeholder="From">
+                    <input type="text" id="to" placeholder="To">
+                    <input type="text" id="date-depart" placeholder="Depart">
+                    <input type="text" id="date-return" placeholder="Return">
+                    <input type="text" id="ticket-counter" placeholder="Travellers and class">
+                    <button type="submit" id="button form-submit-button">Search</button>
+                    <button type="button" id="mixed-route">Mixed route</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="tickets-info-block">
+            <div class="tickets-info-wrapper">
+                <div class="telegram-tickets-block">
+                    <h3>Manage your tickets in Telegram</h3>
+                    <div class="check-info-items">
+                        <div>Access to tickets and account</div>
+                        <div>Agend Support</div>
+                        <div>FAQ</div>
+                    </div>
+                    <div class="button">View options</div>
+                </div>
+                <div class="bus-ticket-block">
+                    <h3>Popular bus tickets to China and Europe</h3>
+                    <div class="check-info-items">
+                        <div>Easy price comparison</div>
+                        <div>Up-to-date schedule</div>
+                    </div>
+                    <div class="button">Search for tickets</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="destinations-and-airlines">
+            <div class="popular-destinations-wrapper">
+                <h2>Popular destinations</h2>
+                <div class="popular-destinations-list">
+                    <div class="popular-destination-item">
+                        <div class="destination-direction">Warsaw -> Milano</div>
+                        <div class="flight-price-from">from 20 $</div>
+                    </div>
+                    <div class="popular-destination-item">
+                        <div class="destination-direction">Warsaw -> Amsterdam</div>
+                        <div class="flight-price-from">from 30 $</div>
+                    </div>
+                    <div class="popular-destination-item">
+                        <div class="destination-direction">Warsaw -> London</div>
+                        <div class="flight-price-from">from 40 $</div>
+                    </div>
+                    <div class="popular-destination-item">
+                        <div class="destination-direction">Warsaw -> Lisbon</div>
+                        <div class="flight-price-from">from 50 $</div>
+                    </div>
+                    <div class="popular-destination-item">
+                        <div class="destination-direction">Warsaw -> Alicante</div>
+                        <div class="flight-price-from">from 60 $</div>
+                    </div>
+                    <div class="popular-destination-item">
+                        <div class="destination-direction">Warsaw -> Paris</div>
+                        <div class="flight-price-from">from 70 $</div>
+                    </div>
+                    <div class="popular-destination-item">
+                        <div class="destination-direction">Warsaw -> Madrid</div>
+                        <div class="flight-price-from">from 80 $</div>
+                    </div>
+                    <div class="popular-destination-item">
+                        <div class="destination-direction">Warsaw -> New York</div>
+                        <div class="flight-price-from">from 200 $</div>
+                    </div>
+                    <div class="popular-destination-item">
+                        <div class="destination-direction">Warsaw -> Barcelona</div>
+                        <div class="flight-price-from">from 30 $</div>
+                    </div>
+                    <div class="popular-destination-item">
+                        <div class="destination-direction">Warsaw -> Denpasar-Bali</div>
+                        <div class="flight-price-from">from 230 $</div>
+                    </div>
+                </div>
+            </div>
+            <div class="top-airlines">
+                <ol>
+                    <li>Emirates <img class="star-icon" alt="star"></img></li>
+                    <li>Qatar Airways <img class="star-icon" alt="star"></img></li>
+                    <li>Turkish Airlines <img class="star-icon" alt="star"></img></li>
+                    <li>Singapore Airlines <img class="star-icon" alt="star"></img></li>
+                    <li>Korean Air <img class="star-icon" alt="star"></img></li>
+                    <li>Etihad Airways <img class="star-icon" alt="star"></img></li>
+                    <li>Cathay Pacific <img class="star-icon" alt="star"></img></li>
+                    <li>Air Astana <img class="star-icon" alt="star"></img></li>
+                    <li>Virgin Atlantic Airways <img class="star-icon" alt="star"></img></li>
+                    <li>Air New Zeland <img class="star-icon" alt="star"></img></li>
+                </ol>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="partners-container">
+            <div class="partner-item">
+                <img src="img/iata.svg" alt="iata">
+            </div>
+            <div class="partner-item">
+                <img src="img/pci.svg" alt="PCI">
+            </div>
+            <div class="partner-item">
+                <img src="img/visa.svg" alt="Visa">
+            </div>
+            <div class="partner-item">
+                <img src="img/mastercard.svg" alt="Mastercard">
+            </div>
+        </div>
+        <div class="footer-info-columns-wrapper">
+            <div class="countries info-column-wrapper">
+                <ul>
+                    <li><a href="">Spain</a></li>
+                    <li><a href="">Turkey</a></li>
+                    <li><a href="">Egypt</a></li>
+                    <li><a href="">Georgia</a></li>
+                    <li><a href="">Poland</a></li>
+                    <li><a href="">France</a></li>
+                    <li><a href="" class="all-option">All countries</a></li>
+                </ul>
+            </div>
+            <div class="cities info-column-wrapper">
+                <ul>
+                    <li><a href="">Chisinau</a></li>
+                    <li><a href="">Dubai</a></li>
+                    <li><a href="">Warsaw</a></li>
+                    <li><a href="">Prague</a></li>
+                    <li><a href="">Paris</a></li>
+                    <li><a href="">Frankfurt</a></li>
+                    <li><a href="" class="all-option">All cities</a></li>
+                </ul>
+            </div>
+            <div class="destinations info-column-wrapper">
+                <ul>
+                    <li><a href="">Chisinau - Istambul</a></li>
+                    <li><a href="">Chisinau - Antaliya</a></li>
+                    <li><a href="">Warsaw - Toronto</a></li>
+                    <li><a href="">Prague - Paris</a></li>
+                    <li><a href="">Paris - Tbilisi</a></li>
+                    <li><a href="">Frankfurt - Prague</a></li>
+                    <li><a href="" class="all-option">All destinations</a></li>
+                </ul>
+            </div>
+            <div class="airports info-column-wrapper">
+                <ul>
+                    <li><a href="">Vaclav Havel Airport</a></li>
+                    <li><a href="">Warsaw Chopin Airport</a></li>
+                    <li><a href="">Malpensa Milano</a></li>
+                    <li><a href="">Fiumincino Rome</a></li>
+                    <li><a href="">Charles de Gaulle Paris</a></li>
+                    <li><a href="">Frankfurt Airport</a></li>
+                    <li><a href="" >All destinations</a></li>
+                </ul>
+            </div>
+            <div class="airlines info-column-wrapper">
+                <ul>
+                    <li><a href="">Emirates</a></li>
+                    <li><a href="">Qatar Airways</a></li>
+                    <li><a href="">Turkish Airlines</a></li>
+                    <li><a href="">Singapore Airlines</a></li>
+                    <li><a href="">Korean Air</a></li>
+                    <li><a href="">Etihad Airways</a></li>
+                    <li> <a href=""class="all-option">All Airlines</a></li>
+                </ul>
+            </div>
+            <div class="services info-column-wrapper">
+                <ul>
+                    <li><a href="">Airlines ratings</a></li>
+                    <li><a href="">Price comparisement</a></li>
+                    <li><a href="">Flight schedule</a></li>
+                    <li><a href="">Sales</a></li>
+                    <li><a href="">FAQ</a></li>
+                    <li><a href="">Support</a></li>
+                    <li> <a href=""class="all-option">Site map</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-links">
+            <div class="useful-links-wrapper">
+                <a href=""><img src="img/ttn-logo.png" alt="TTN"></a>
+                <a href="">Partner Program</a>
+                <a href="" class="button app-button">Google play</a>
+                <a href="" class="button app-button">App store</a>
+            </div>
+            <div class="socials-wrapper">
+                <a href=""><img src="img/instagram.svg" alt="Instagram"></a>
+                <a href=""><img src="img/fb.svg" alt="FB"></a>
+                <a href=""><img src="img/telegram.svg" alt="Telegram"></a>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>
+
