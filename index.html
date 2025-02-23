@@ -15,20 +15,21 @@
 
 <body>
     <header>
-        <div class="container">
             <nav class="main-nav">
-                <ul class="button-list nav">
-                    <li><a href="">Corporate clients</a></li>
-                    <li><a href="">Flight tickets</a></li>
-                    <li><a href="">Information</a></li>
-                    <li><a href="">English</a></li>
+                <ul class="button-list nav wide-nav">
+                    <li><a href="#">Corporate clients</a></li>
+                    <li><a href="#">Flight tickets</a></li>
+                    <li><a href="#">Information</a></li>
+                    <li><a href="#">English</a></li>
+                </ul>
+                <ul class="button-list nav mobile-nav">
+                    <li><a href="#"><img src="img/lang.svg" alt="Language picker"></a></li>
+                    <li><a href="#"><img src="img/menu.svg" alt="Burger menu"></a></li>
                 </ul>
             </nav>
-        </div>
     </header>
     <main>
         <section class="ticket-search">
-            <div class="container">
                 <h1>The best flight tickets for the lowest prices</h1>
                 <div class="ticket-type-wrapper">
                     <ul class="ticket-type-list button-list">
@@ -41,126 +42,170 @@
                 </div>
                 <div class="ticket-search-wrapper">
                     <div class="ticket-search__configuration">
-                        <div class="ticket-destinations">
-                            <div class="ticket-from">
-                                <span>From where</span>
-                                <div>Warsaw</div>
+                        <form action="">
+                            <div class="form-item-wrapper ticket-from">
+                                <label for="form-item__from">From where</label>
+                                <input type="text" id="form-item__from">
                             </div>
-                            <div class="ticket-to">
-                                <div>To</div>
+                            <div class="form-item-wrapper ticket-to">
+                                <label for="form-item__to">To</label>
+                                <input type="text" id="form-item__to">
                             </div>
-                        </div>
-                        <div class="ticket-dates">
-                            <div class="date-departure">
-                                <div>There</div>
+                            <div class="form-item-wrapper date-departure">
+                                <label for="form-item__depart">Depart</label>
+                                <input type="text" id="form-item__depart">
                             </div>
-                            <div class="date-return">
-                                <div>Return</div>
-                                <img src="img/calendar4.svg" alt="calendar icon">
+                            <div class="form-item-wrapper date-return">
+                                <label for="form-item__return">Return</label>
+                                <input type="text" id="form-item__return">
                             </div>
-                        </div>
-                        <div class="ticket-configuration">
-                            <span>Passengers, class</span>
-                            <div>1 Passenger, any</div>
-                        </div>
-                    </div>
-                    <div class="ticket-search__find-button">
-                        <div>Search</div>
+                            <div class="form-item-wrapper ticket-configuration">
+                                <label for="form-item__passengers-class">Passengers, class</label>
+
+                                <input type="text" id="form-item__passengers-class">
+                            </div>
+                            <input type="submit" value="Search">
+                            <button type="button" id="mixed-route">Mixed route</button>
+                        </form>
                     </div>
                 </div>
-            </div>
         </section>
 
         <section class="tickets-info-block">
-            <div class="container">
-                <div class="tickets-info-wrapper">
-                    <div class="telegram-tickets-block">
-                        <h3>Manage your tickets in Telegram</h3>
-                        <div class="check-info-items">
-                            <div>Access to tickets and account</div>
-                            <div>Agend Support</div>
-                            <div>FAQ</div>
-                        </div>
-                        <div class="button">View options</div>
+                <div class="telegram-tickets-block">
+                    <h2>Manage your tickets in Telegram</h2>
+                    <div class="check-info-items">
+                        <ul>
+                            <li>Access to tickets and account</li>
+                            <li>Agend Support</li>
+                            <li>FAQ</li>
+                        </ul>
                     </div>
-                    <div class="bus-ticket-block">
-                        <h3>Popular bus tickets to China and Europe</h3>
-                        <div class="check-info-items">
-                            <div>Easy price comparison</div>
-                            <div>Up-to-date schedule</div>
-                        </div>
-                        <div class="button">Search for tickets</div>
-                    </div>
+                    <a href="">View options</a>
                 </div>
-            </div>
+                <div class="bus-ticket-block">
+                    <h2>Popular bus tickets to China and Europe</h2>
+                    <div class="check-info-items">
+                        <ul>
+                            <li>Easy price comparison</li>
+                            <li>Up-to-date schedule</li>
+                        </ul>
+                    </div>
+                    <a href="">Search for tickets</a>
+                </div>
         </section>
 
         <section class="destinations-and-airlines">
-            <div class="container">
                 <div class="popular-destinations-wrapper">
                     <h2>Popular destinations</h2>
-                    <div class="popular-destinations-list">
-                        <div class="popular-destination-item">
-                            <div class="destination-direction">Warsaw -> Milano</div>
+                    <ul class="popular-destinations-list">
+                        <li class="popular-destination-item">
+                            <div class="destination-direction">Warsaw &rarr; Milano</div>
                             <div class="flight-price-from">from 20 $</div>
-                        </div>
-                        <div class="popular-destination-item">
-                            <div class="destination-direction">Warsaw -> Amsterdam</div>
+                        </li>
+                        <li class="popular-destination-item">
+                            <div class="destination-direction">Warsaw &rarr; Amsterdam</div>
                             <div class="flight-price-from">from 30 $</div>
-                        </div>
-                        <div class="popular-destination-item">
-                            <div class="destination-direction">Warsaw -> London</div>
+                        </li>
+                        <li class="popular-destination-item">
+                            <div class="destination-direction">Warsaw &rarr; London</div>
                             <div class="flight-price-from">from 40 $</div>
-                        </div>
-                        <div class="popular-destination-item">
-                            <div class="destination-direction">Warsaw -> Lisbon</div>
+                        </li>
+                        <li class="popular-destination-item">
+                            <div class="destination-direction">Warsaw &rarr; Lisbon</div>
                             <div class="flight-price-from">from 50 $</div>
-                        </div>
-                        <div class="popular-destination-item">
-                            <div class="destination-direction">Warsaw -> Alicante</div>
+                        </li>
+                        <li class="popular-destination-item">
+                            <div class="destination-direction">Warsaw &rarr; Alicante</div>
                             <div class="flight-price-from">from 60 $</div>
-                        </div>
-                        <div class="popular-destination-item">
-                            <div class="destination-direction">Warsaw -> Paris</div>
+                        </li>
+                        <li class="popular-destination-item">
+                            <div class="destination-direction">Warsaw &rarr; Paris</div>
                             <div class="flight-price-from">from 70 $</div>
-                        </div>
-                        <div class="popular-destination-item">
-                            <div class="destination-direction">Warsaw -> Madrid</div>
+                        </li>
+                        <li class="popular-destination-item">
+                            <div class="destination-direction">Warsaw &rarr; Madrid</div>
                             <div class="flight-price-from">from 80 $</div>
-                        </div>
-                        <div class="popular-destination-item">
-                            <div class="destination-direction">Warsaw -> New York</div>
+                        </li>
+                        <li class="popular-destination-item">
+                            <div class="destination-direction">Warsaw &rarr; New York</div>
                             <div class="flight-price-from">from 200 $</div>
-                        </div>
-                        <div class="popular-destination-item">
-                            <div class="destination-direction">Warsaw -> Barcelona</div>
+                        </li>
+                        <li class="popular-destination-item">
+                            <div class="destination-direction">Warsaw &rarr; Barcelona</div>
                             <div class="flight-price-from">from 30 $</div>
-                        </div>
-                        <div class="popular-destination-item">
-                            <div class="destination-direction">Warsaw -> Denpasar-Bali</div>
+                        </li>
+                        <li class="popular-destination-item">
+                            <div class="destination-direction">Warsaw  Denpasar-Bali</div>
                             <div class="flight-price-from">from 230 $</div>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
                 <div class="top-airlines">
-                    <ol>
-                        <li>Emirates <img class="star-icon" alt="star"></img></li>
-                        <li>Qatar Airways <img class="star-icon" alt="star"></img></li>
-                        <li>Turkish Airlines <img class="star-icon" alt="star"></img></li>
-                        <li>Singapore Airlines <img class="star-icon" alt="star"></img></li>
-                        <li>Korean Air <img class="star-icon" alt="star"></img></li>
-                        <li>Etihad Airways <img class="star-icon" alt="star"></img></li>
-                        <li>Cathay Pacific <img class="star-icon" alt="star"></img></li>
-                        <li>Air Astana <img class="star-icon" alt="star"></img></li>
-                        <li>Virgin Atlantic Airways <img class="star-icon" alt="star"></img></li>
-                        <li>Air New Zeland <img class="star-icon" alt="star"></img></li>
+                    <ul>
+                        <li><div class="rating">1</div> <a href="">Emirates</a></li>
+                        <li><div class="rating">2</div> <a href="">Qatar Airways</a></li>
+                        <li><div class="rating">3</div><a href="">Turkish Airlines</a></li>
+                        <li><div class="rating">4</div><a href="">Singapore Airlines</a></li>
+                        <li><div class="rating">5</div><a href="">Korean Air</a></li>
+                        <li><div class="rating">6</div><a href="">Etihad Airways</a></li>
+                        <li><div class="rating">7</div><a href="">Cathay Pacific</a></li>
+                        <li><div class="rating">8</div><a href="">Air Astana</a></li>
+                        <li><div class="rating">9</div><a href="">Virgin Atlantic Airways</a></li>
+                        <li><div class="rating">10</div><a href="">Air New Zeland</a></li>
                     </ol>
                 </div>
+        </section>
+        <section class="ticket-information">
+            <h2>Hot airline ticket sales</h2>
+            <div class="ticket-information-wrapper">
+                <h3>How to find airline ticket with a discount</h3>
+                <p>
+                    On our website, you can buy plane tickets or make an early reservation. Promotions, discounts, and special offers constantly provided by leading low-cost airlines allow you to purchase affordable airline tickets without leaving your home. If you want to save money and buy cheaper tickets, pay attention to flights with layovers. However, time—like a precious currency for travelers—can be saved with direct flights, even though they are more expensive than tickets with layovers.
+                </p>
             </div>
+            <div class="ticket-information-wrapper">
+                <h3>Customer Support</h3>
+                <p>
+                    Which ticket should I order for a child? Where can I enter visa details? Is it possible to change the departure dates? How do I add extra baggage? Our support service operators know the answers to all flight-related questions. We assist with your bookings 24/7/365 in Ukrainian, Russian, and English. We are always ready to help you select, pay for, or modify your ticket quickly and conveniently! With our user-friendly search system, booking airline tickets online is both affordable and safe.
+                </p>
+            </div>
+            <div class="ticket-information-wrapper">
+                <h3>Loyalty Program for Regular Customers</h3>
+                <p>
+                    For purchasing airline tickets on our website, you will receive bonuses—1% of the transaction amount. Once you accumulate enough points, you can use them to pay for plane tickets on future purchases. The maximum discount available through the bonus program is 25%.
+                </p>
+            </div>
+            <div class="ticket-information-wrapper">
+                <h3>The Cheapest Airline Tickets</h3>
+                <p>
+                    How and where can you buy cheap airline tickets? Our partnership with 750 airlines allows us to offer flexible fares and provide our customers with the best conditions. Our flight aggregator quickly processes your requests and displays all available options. You can use filters to sort offers by airline, departure time, and other parameters.
+                </p>
+            </div>
+            <div class="ticket-information-wrapper">
+                <h3>Price Comparison for Airline Tickets</h3>
+                <p>
+                    With us, you can always book very cheap flights to Ukraine, Europe, and other parts of the world. Our dynamic pricing system determines the best time to buy tickets and also advises on high and low travel seasons for various routes.
+                </p>
+            </div>
+        </section>
+        <section class="faq">
+            <a href="">How to book a flight ticket</a>
+            <a href="">How to pay for a flight ticket</a>
+            <a href="">How to check in for a flight</a>
+            <a href="">How to return a flight ticket</a>
+            <a href="">Loyalty program</a>
+            <a href="">All topics</a>
+        </section>
+        <section class="subscribe">
+            <h2>The best offers for travelling</h2>
+            <form action="">
+                <input type="email" placeholder="Email *">
+                <button type="submit" value="Submit">Submit</button>
+            </form>
         </section>
     </main>
     <footer>
-        <div class="container">
             <div class="partners-container">
                 <div class="partner-item">
                     <img src="img/iata.svg" alt="iata">
@@ -256,7 +301,6 @@
                     <a href=""><img src="img/telegram.svg" alt="Telegram"></a>
                 </div>
             </div>
-        </div>
     </footer>
 </body>
 
