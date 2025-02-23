@@ -1,0 +1,90 @@
+:root {
+    --purple: #6E36F7;
+    --red: #FF4D4D;
+    --salmon: #ff8c8c;
+    --white: #ffffff;
+    --black: #000000;
+    --purple-light: #8853DD;
+}
+
+body {
+    font-family: "Roboto", serif;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    max-width: 870px;
+    margin: 0 auto;
+}
+
+header, .ticket-search {
+    background-color: var(--purple);
+    color: var(--white);
+}
+
+.button-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.button-list.nav {
+    gap: 24px;
+}
+
+.button-list a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.1s ease-out;
+}
+
+.button-list.nav a:hover {
+    color: var(--red);
+}
+
+.main-nav .button-list {
+    align-items: center;
+    height: 60px;
+    justify-content: flex-end;
+}
+
+h1 {
+    color: var(--salmon);
+    padding: 1rem 0;
+    font-size: 2.5rem;
+}
+
+.ticket-type-list {
+    margin: 1rem 0;
+    gap: 10px;
+}
+
+.ticket-type-list li {
+    padding: 4px 20px;
+    background-color: var(--purple-light);
+    color: var(--white);
+    border-radius: 16px;
+    font-weight: 500;
+}
+
+.ticket-type-list li.active {
+    background-color: var(--white);
+}
+
+.ticket-type-list li.active a {
+    color: var(--black);
+}
+
+.ticket-type-list li:hover {
+    background-color: #FF4D4D;
+}
+
+.ticket-search-wrapper{
+    margin: 1rem 0;
+}
