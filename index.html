@@ -65,15 +65,28 @@
                             <input type="text" id="form-item__return">
                         </div>
                         <div class="form-item-wrapper ticket-configuration">
-                            <label for="form-item__passengers">Passengers</label>
-                            <label for="form-item__class">Class</label>
-                            <input type="number" id="form-item__passengers">
-                            <select id="form-item__class" name="class">
-                                <option value="economy">Economy</option>
-                                <option value="premiumEconomy">Premium Economy</option>
-                                <option value="business">Business Class</option>
-                                <option value="first">First Class</option>
-                              </select>
+                            <button type="button">1 Passenger, Economy</button>
+                            <div>
+                                <span>Maximum 9 passengers</span>
+                                <label for="form-item__passengers-adults">Adults</label>
+                                <span>Above 12 years old</span>
+                                <input type="number" id="form-item__passengers-adults">
+                                <label for="form-item__passengers-children">Children</label>
+                                <span>2-12 years old</span>
+                                <input type="number" id="form-item__passengers-children">
+                                <label for="form-item__passengers-toddler">Toddlers</label> <span>?</span>
+                                <span>Up to 2 years old</span>
+                                <input type="number" id="form-item__passengers-toddler">
+
+                                <label for="form-item__class">Class</label>
+                                <select id="form-item__class" name="class">
+                                    <option value="economy">Economy</option>
+                                    <option value="premiumEconomy">Premium Economy</option>
+                                    <option value="business">Business Class</option>
+                                    <option value="first">First Class</option>
+                                </select>
+                                <button >OK</button>
+                            </div>
                         </div>
                         <input type="submit" value="Search">
                         <button type="button" id="mixed-route">Mixed route</button>
