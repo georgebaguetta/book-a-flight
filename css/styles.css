@@ -17,14 +17,13 @@ body {
     font-size: 14px;
 }
 
+main {
+
+}
+
 * {
     padding: 0;
     margin: 0;
-}
-
-.container {
-    max-width: 870px;
-    margin: 0 auto;
 }
 
 header, .ticket-search {
@@ -93,18 +92,16 @@ h1 {
     background-color: #FF4D4D;
 }
 
+.ticket-search-form {
+    display: flex;
+    flex-direction: row;
+}
+
 .ticket-search-wrapper {
     margin-top: 1rem;
     display: flex;
     flex-direction: row;
     gap: 10px;
-}
-
-.ticket-search__configuration,
-.ticket-destinations,
-.ticket-dates {
-    display: flex;
-    flex-direction: row;
 }
 
 .ticket-search__configuration {
@@ -115,12 +112,15 @@ h1 {
     height: 60px;
     background-color: var(--white);
     color: var(--black);
-    min-width: 135px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     padding: 0 10px;
+}
+
+.form-input {
+    border: 0;
 }
 
 .form-item-wrapper.ticket-from:not(:last-of-type) {

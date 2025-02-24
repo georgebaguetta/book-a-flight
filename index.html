@@ -16,20 +16,21 @@
 <body>
     <header>
         <nav class="main-nav">
-            <ul class="button-list nav wide-nav">
+            <ul class="nav">
                 <li><a href="#">Corporate clients</a></li>
                 <li><a href="#">Flight tickets</a></li>
                 <li><a href="#">Information</a></li>
-                <li><select id="lang-picker" onchange="location = this.value;">
-                        <option id="english" value="/index.html" selected="selected">English</option>
-                        <option id="spanish" value="index.html">Spanish</option>
-                        <option id="czech" value="index.html">Czech</option>
-                        <option id="russian" value="index.html">Russian</option>
-                    </select></li>
             </ul>
-            <ul class="button-list nav mobile-nav">
-                <li><a href="#"><img src="img/lang.svg" alt="Language picker"></a></li>
-                <li><a href="#"><img src="img/menu.svg" alt="Burger menu"></a></li>
+            <ul class="nav country-picker">
+                <li class="dropdown country-picker">
+                    <ul class="dropdown-menu">
+                        <li><a href=""><span>English</span></a></li>
+                        <li><a href=""><span>Deutsch</span></a></li>
+                        <li><a href=""><span>Español</span></a></li>
+                        <li><a href=""><span>Italiano</span></a></li>
+                        <li><a href=""><span>Français</span></a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
     </header>
@@ -47,26 +48,26 @@
             </div>
             <div class="ticket-search-wrapper">
                 <div class="ticket-search__configuration">
-                    <form action="">
+                    <form action="" class="ticket-search-form">
                         <div class="form-item-wrapper ticket-from">
-                            <label for="form-item__from">From where</label>
-                            <input type="text" id="form-item__from">
+                            <label for="form-item__from" class="form-input ">From where</label>
+                            <input type="text" id="form-item__from" class="form-input" placeholder="Prague">
                         </div>
                         <div class="form-item-wrapper ticket-to">
                             <label for="form-item__to">To</label>
-                            <input type="text" id="form-item__to">
+                            <input type="text" id="form-item__to" class="form-input" placeholder="">
                         </div>
                         <div class="form-item-wrapper date-departure">
                             <label for="form-item__depart">Depart</label>
-                            <input type="text" id="form-item__depart">
+                            <input type="text" id="form-item__depart" class="form-input ">
                         </div>
                         <div class="form-item-wrapper date-return">
                             <label for="form-item__return">Return</label>
-                            <input type="text" id="form-item__return">
+                            <input type="text" id="form-item__return" class="form-input ">
                         </div>
                         <div class="form-item-wrapper ticket-configuration">
                             <button type="button">1 Passenger, Economy</button>
-                            <div>
+                            <div style="display: none;">
                                 <span>Maximum 9 passengers</span>
                                 <label for="form-item__passengers-adults">Adults</label>
                                 <span>Above 12 years old</span>
@@ -85,12 +86,14 @@
                                     <option value="business">Business Class</option>
                                     <option value="first">First Class</option>
                                 </select>
-                                <button >OK</button>
+                                <button>OK</button>
                             </div>
                         </div>
                         <input type="submit" value="Search">
-                        <button type="button" id="mixed-route">Mixed route</button>
                     </form>
+                    <div>
+                        <a href="">Mixed route</a>
+                    </div>
                 </div>
             </div>
         </section>
