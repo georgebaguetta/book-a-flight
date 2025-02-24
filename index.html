@@ -15,179 +15,219 @@
 
 <body>
     <header>
-            <nav class="main-nav">
-                <ul class="button-list nav wide-nav">
-                    <li><a href="#">Corporate clients</a></li>
-                    <li><a href="#">Flight tickets</a></li>
-                    <li><a href="#">Information</a></li>
-                    <li><a href="#">English</a></li>
-                </ul>
-                <ul class="button-list nav mobile-nav">
-                    <li><a href="#"><img src="img/lang.svg" alt="Language picker"></a></li>
-                    <li><a href="#"><img src="img/menu.svg" alt="Burger menu"></a></li>
-                </ul>
-            </nav>
+        <nav class="main-nav">
+            <ul class="button-list nav wide-nav">
+                <li><a href="#">Corporate clients</a></li>
+                <li><a href="#">Flight tickets</a></li>
+                <li><a href="#">Information</a></li>
+                <li><select id="lang-picker" onchange="location = this.value;">
+                    <option id="english" value="/index.html" selected="selected">English</option>
+                    <option id="spanish" value="index.html">Spanish</option>
+                    <option id="czech" value="index.html">Czech</option>
+                    <option id="russian" value="index.html">Russian</option>
+                 </select></li>
+            </ul>
+            <ul class="button-list nav mobile-nav">
+                <li><a href="#"><img src="img/lang.svg" alt="Language picker"></a></li>
+                <li><a href="#"><img src="img/menu.svg" alt="Burger menu"></a></li>
+            </ul>
+        </nav>
     </header>
     <main>
         <section class="ticket-search">
-                <h1>The best flight tickets for the lowest prices</h1>
-                <div class="ticket-type-wrapper">
-                    <ul class="ticket-type-list button-list">
-                        <li class="active"><a href="">Flight tickets</a></li>
-                        <li><a href="">Train tickets</a></li>
-                        <li><a href="">Bus tickets</a></li>
-                        <li><a href="">Hotels</a></li>
-                        <li><a href="">Insurance</a></li>
-                    </ul>
+            <h1>The best flight tickets for the lowest prices</h1>
+            <div class="ticket-type-wrapper">
+                <ul class="ticket-type-list button-list">
+                    <li class="active"><a href="">Flight tickets</a></li>
+                    <li><a href="">Train tickets</a></li>
+                    <li><a href="">Bus tickets</a></li>
+                    <li><a href="">Hotels</a> <span class="discount-tag">60%</span></li>
+                    <li><a href="">Insurance</a></li>
+                </ul>
+            </div>
+            <div class="ticket-search-wrapper">
+                <div class="ticket-search__configuration">
+                    <form action="">
+                        <div class="form-item-wrapper ticket-from">
+                            <label for="form-item__from">From where</label>
+                            <input type="text" id="form-item__from">
+                        </div>
+                        <div class="form-item-wrapper ticket-to">
+                            <label for="form-item__to">To</label>
+                            <input type="text" id="form-item__to">
+                        </div>
+                        <div class="form-item-wrapper date-departure">
+                            <label for="form-item__depart">Depart</label>
+                            <input type="text" id="form-item__depart">
+                        </div>
+                        <div class="form-item-wrapper date-return">
+                            <label for="form-item__return">Return</label>
+                            <input type="text" id="form-item__return">
+                        </div>
+                        <div class="form-item-wrapper ticket-configuration">
+                            <label for="form-item__passengers">Passengers</label>
+                            <label for="form-item__class">Class</label>
+                            <input type="number" id="form-item__passengers">
+                            <select id="form-item__class" name="class">
+                                <option value="economy">Economy</option>
+                                <option value="premiumEconomy">Premium Economy</option>
+                                <option value="business">Business Class</option>
+                                <option value="first">First Class</option>
+                              </select>
+                        </div>
+                        <input type="submit" value="Search">
+                        <button type="button" id="mixed-route">Mixed route</button>
+                    </form>
                 </div>
-                <div class="ticket-search-wrapper">
-                    <div class="ticket-search__configuration">
-                        <form action="">
-                            <div class="form-item-wrapper ticket-from">
-                                <label for="form-item__from">From where</label>
-                                <input type="text" id="form-item__from">
-                            </div>
-                            <div class="form-item-wrapper ticket-to">
-                                <label for="form-item__to">To</label>
-                                <input type="text" id="form-item__to">
-                            </div>
-                            <div class="form-item-wrapper date-departure">
-                                <label for="form-item__depart">Depart</label>
-                                <input type="text" id="form-item__depart">
-                            </div>
-                            <div class="form-item-wrapper date-return">
-                                <label for="form-item__return">Return</label>
-                                <input type="text" id="form-item__return">
-                            </div>
-                            <div class="form-item-wrapper ticket-configuration">
-                                <label for="form-item__passengers-class">Passengers, class</label>
-
-                                <input type="text" id="form-item__passengers-class">
-                            </div>
-                            <input type="submit" value="Search">
-                            <button type="button" id="mixed-route">Mixed route</button>
-                        </form>
-                    </div>
-                </div>
+            </div>
         </section>
 
         <section class="tickets-info-block">
-                <div class="telegram-tickets-block">
-                    <h2>Manage your tickets in Telegram</h2>
-                    <div class="check-info-items">
-                        <ul>
-                            <li>Access to tickets and account</li>
-                            <li>Agend Support</li>
-                            <li>FAQ</li>
-                        </ul>
-                    </div>
-                    <a href="">View options</a>
+            <div class="telegram-tickets-block">
+                <h2>Manage your tickets in Telegram</h2>
+                <div class="check-info-items">
+                    <ul>
+                        <li>Access to tickets and account</li>
+                        <li>Agend Support</li>
+                        <li>FAQ</li>
+                    </ul>
                 </div>
-                <div class="bus-ticket-block">
-                    <h2>Popular bus tickets to China and Europe</h2>
-                    <div class="check-info-items">
-                        <ul>
-                            <li>Easy price comparison</li>
-                            <li>Up-to-date schedule</li>
-                        </ul>
-                    </div>
-                    <a href="">Search for tickets</a>
+                <a href="">View options</a>
+            </div>
+            <div class="bus-ticket-block">
+                <h2>Popular bus tickets to China and Europe</h2>
+                <div class="check-info-items">
+                    <ul>
+                        <li>Easy price comparison</li>
+                        <li>Up-to-date schedule</li>
+                    </ul>
                 </div>
+                <a href="">Search for tickets</a>
+            </div>
         </section>
 
         <section class="destinations-and-airlines">
-                <div class="popular-destinations-wrapper">
-                    <h2>Popular destinations</h2>
-                    <ul class="popular-destinations-list">
-                        <li class="popular-destination-item">
-                            <div class="destination-direction">Warsaw &rarr; Milano</div>
-                            <div class="flight-price-from">from 20 $</div>
-                        </li>
-                        <li class="popular-destination-item">
-                            <div class="destination-direction">Warsaw &rarr; Amsterdam</div>
-                            <div class="flight-price-from">from 30 $</div>
-                        </li>
-                        <li class="popular-destination-item">
-                            <div class="destination-direction">Warsaw &rarr; London</div>
-                            <div class="flight-price-from">from 40 $</div>
-                        </li>
-                        <li class="popular-destination-item">
-                            <div class="destination-direction">Warsaw &rarr; Lisbon</div>
-                            <div class="flight-price-from">from 50 $</div>
-                        </li>
-                        <li class="popular-destination-item">
-                            <div class="destination-direction">Warsaw &rarr; Alicante</div>
-                            <div class="flight-price-from">from 60 $</div>
-                        </li>
-                        <li class="popular-destination-item">
-                            <div class="destination-direction">Warsaw &rarr; Paris</div>
-                            <div class="flight-price-from">from 70 $</div>
-                        </li>
-                        <li class="popular-destination-item">
-                            <div class="destination-direction">Warsaw &rarr; Madrid</div>
-                            <div class="flight-price-from">from 80 $</div>
-                        </li>
-                        <li class="popular-destination-item">
-                            <div class="destination-direction">Warsaw &rarr; New York</div>
-                            <div class="flight-price-from">from 200 $</div>
-                        </li>
-                        <li class="popular-destination-item">
-                            <div class="destination-direction">Warsaw &rarr; Barcelona</div>
-                            <div class="flight-price-from">from 30 $</div>
-                        </li>
-                        <li class="popular-destination-item">
-                            <div class="destination-direction">Warsaw  Denpasar-Bali</div>
-                            <div class="flight-price-from">from 230 $</div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="top-airlines">
-                    <h2>Top 10 airlines</h2>
-                    <a href="">Learn more</a>
-                    <ul>
-                        <li><div class="rating">1</div> <a href="">Emirates</a></li>
-                        <li><div class="rating">2</div> <a href="">Qatar Airways</a></li>
-                        <li><div class="rating">3</div><a href="">Turkish Airlines</a></li>
-                        <li><div class="rating">4</div><a href="">Singapore Airlines</a></li>
-                        <li><div class="rating">5</div><a href="">Korean Air</a></li>
-                        <li><div class="rating">6</div><a href="">Etihad Airways</a></li>
-                        <li><div class="rating">7</div><a href="">Cathay Pacific</a></li>
-                        <li><div class="rating">8</div><a href="">Air Astana</a></li>
-                        <li><div class="rating">9</div><a href="">Virgin Atlantic Airways</a></li>
-                        <li><div class="rating">10</div><a href="">Air New Zeland</a></li>
-                    </ol>
-                </div>
+            <div class="popular-destinations-wrapper">
+                <h2>Popular destinations</h2>
+                <ul class="popular-destinations-list">
+                    <li class="popular-destination-item">
+                        <div class="destination-direction">Warsaw &rarr; Milano</div>
+                        <div class="flight-price-from">from 20 $</div>
+                    </li>
+                    <li class="popular-destination-item">
+                        <div class="destination-direction">Warsaw &rarr; Amsterdam</div>
+                        <div class="flight-price-from">from 30 $</div>
+                    </li>
+                    <li class="popular-destination-item">
+                        <div class="destination-direction">Warsaw &rarr; London</div>
+                        <div class="flight-price-from">from 40 $</div>
+                    </li>
+                    <li class="popular-destination-item">
+                        <div class="destination-direction">Warsaw &rarr; Lisbon</div>
+                        <div class="flight-price-from">from 50 $</div>
+                    </li>
+                    <li class="popular-destination-item">
+                        <div class="destination-direction">Warsaw &rarr; Alicante</div>
+                        <div class="flight-price-from">from 60 $</div>
+                    </li>
+                    <li class="popular-destination-item">
+                        <div class="destination-direction">Warsaw &rarr; Paris</div>
+                        <div class="flight-price-from">from 70 $</div>
+                    </li>
+                    <li class="popular-destination-item">
+                        <div class="destination-direction">Warsaw &rarr; Madrid</div>
+                        <div class="flight-price-from">from 80 $</div>
+                    </li>
+                    <li class="popular-destination-item">
+                        <div class="destination-direction">Warsaw &rarr; New York</div>
+                        <div class="flight-price-from">from 200 $</div>
+                    </li>
+                    <li class="popular-destination-item">
+                        <div class="destination-direction">Warsaw &rarr; Barcelona</div>
+                        <div class="flight-price-from">from 30 $</div>
+                    </li>
+                    <li class="popular-destination-item">
+                        <div class="destination-direction">Warsaw Denpasar-Bali</div>
+                        <div class="flight-price-from">from 230 $</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="top-airlines">
+                <h2>Top 10 airlines</h2>
+                <a href="">Learn more</a>
+                <ul class="top-airlines-list">
+                    <li>
+                        <div class="rating">1</div> <a href="">Emirates</a> <span class="rating-score">4.7</span>
+                    </li>
+                    <li>
+                        <div class="rating">2</div> <a href="">Qatar Airways</a> <span class="rating-score">4.7</span>
+                    </li>
+                    <li>
+                        <div class="rating">3</div><a href="">Turkish Airlines</a> <span class="rating-score">4.7</span>
+                    </li>
+                    <li>
+                        <div class="rating">4</div><a href="">Singapore Airlines</a> <span class="rating-score">4.7</span>
+                    </li>
+                    <li>
+                        <div class="rating">5</div><a href="">Korean Air</a> <span class="rating-score">4.7</span>
+                    </li>
+                    <li>
+                        <div class="rating">6</div><a href="">Etihad Airways</a> <span class="rating-score">4.6</span>
+                    </li>
+                    <li>
+                        <div class="rating">7</div><a href="">Cathay Pacific</a> <span class="rating-score">4.5</span>
+                    </li>
+                    <li>
+                        <div class="rating">8</div><a href="">Air Astana</a> <span class="rating-score">4.5</span>
+                    </li>
+                    <li>
+                        <div class="rating">9</div><a href="">Virgin Atlantic Airways</a> <span
+                            class="rating-score">4.5</span>
+                    </li>
+                    <li>
+                        <div class="rating">10</div><a href="">Air New Zeland</a> <span class="rating-score">4.5</span>
+                    </li>
+                </ul>
+            </div>
         </section>
         <section class="ticket-information">
             <h2>Hot airline ticket sales</h2>
             <div class="ticket-information-wrapper">
                 <h3>How to find airline ticket with a discount</h3>
                 <p>
-                    On our website, you can buy plane tickets or make an early reservation. Promotions, discounts, and special offers constantly provided by leading low-cost airlines allow you to purchase affordable airline tickets without leaving your home. If you want to save money and buy cheaper tickets, pay attention to flights with layovers. However, time—like a precious currency for travelers—can be saved with direct flights, even though they are more expensive than tickets with layovers.
+                    On our website, you can buy plane tickets or make an early reservation. Promotions, discounts, and
+                    special offers constantly provided by leading low-cost airlines allow you to purchase affordable
+                    airline tickets without leaving your home. If you want to save money and buy cheaper tickets, pay
+                    attention to flights with layovers. However, time—like a precious currency for travelers—can be
+                    saved with direct flights, even though they are more expensive than tickets with layovers.
                 </p>
-            </div>
-            <div class="ticket-information-wrapper">
                 <h3>Customer Support</h3>
                 <p>
-                    Which ticket should I order for a child? Where can I enter visa details? Is it possible to change the departure dates? How do I add extra baggage? Our support service operators know the answers to all flight-related questions. We assist with your bookings 24/7/365 in Ukrainian, Russian, and English. We are always ready to help you select, pay for, or modify your ticket quickly and conveniently! With our user-friendly search system, booking airline tickets online is both affordable and safe.
+                    Which ticket should I order for a child? Where can I enter visa details? Is it possible to change
+                    the departure dates? How do I add extra baggage? Our support service operators know the answers to
+                    all flight-related questions. We assist with your bookings 24/7/365 in Ukrainian, Russian, and
+                    English. We are always ready to help you select, pay for, or modify your ticket quickly and
+                    conveniently! With our user-friendly search system, booking airline tickets online is both
+                    affordable and safe.
                 </p>
-            </div>
-            <div class="ticket-information-wrapper">
                 <h3>Loyalty Program for Regular Customers</h3>
                 <p>
-                    For purchasing airline tickets on our website, you will receive bonuses—1% of the transaction amount. Once you accumulate enough points, you can use them to pay for plane tickets on future purchases. The maximum discount available through the bonus program is 25%.
+                    For purchasing airline tickets on our website, you will receive bonuses—1% of the transaction
+                    amount. Once you accumulate enough points, you can use them to pay for plane tickets on future
+                    purchases. The maximum discount available through the bonus program is 25%.
                 </p>
-            </div>
-            <div class="ticket-information-wrapper">
                 <h3>The Cheapest Airline Tickets</h3>
                 <p>
-                    How and where can you buy cheap airline tickets? Our partnership with 750 airlines allows us to offer flexible fares and provide our customers with the best conditions. Our flight aggregator quickly processes your requests and displays all available options. You can use filters to sort offers by airline, departure time, and other parameters.
+                    How and where can you buy cheap airline tickets? Our partnership with 750 airlines allows us to
+                    offer flexible fares and provide our customers with the best conditions. Our flight aggregator
+                    quickly processes your requests and displays all available options. You can use filters to sort
+                    offers by airline, departure time, and other parameters.
                 </p>
-            </div>
-            <div class="ticket-information-wrapper">
                 <h3>Price Comparison for Airline Tickets</h3>
                 <p>
-                    With us, you can always book very cheap flights to Ukraine, Europe, and other parts of the world. Our dynamic pricing system determines the best time to buy tickets and also advises on high and low travel seasons for various routes.
+                    With us, you can always book very cheap flights to Ukraine, Europe, and other parts of the world.
+                    Our dynamic pricing system determines the best time to buy tickets and also advises on high and low
+                    travel seasons for various routes.
                 </p>
             </div>
         </section>
@@ -208,101 +248,101 @@
         </section>
     </main>
     <footer>
-            <div class="partners-container">
-                <div class="partner-item">
-                    <img src="img/iata.svg" alt="iata">
-                </div>
-                <div class="partner-item">
-                    <img src="img/pci.svg" alt="PCI">
-                </div>
-                <div class="partner-item">
-                    <img src="img/visa.svg" alt="Visa">
-                </div>
-                <div class="partner-item">
-                    <img src="img/mastercard.svg" alt="Mastercard">
-                </div>
+        <div class="partners-container">
+            <div class="partner-item">
+                <img src="img/iata.svg" alt="iata">
             </div>
-            <div class="footer-info-columns-wrapper">
-                <div class="countries info-column-wrapper">
-                    <ul>
-                        <li><a href="">Spain</a></li>
-                        <li><a href="">Turkey</a></li>
-                        <li><a href="">Egypt</a></li>
-                        <li><a href="">Georgia</a></li>
-                        <li><a href="">Poland</a></li>
-                        <li><a href="">France</a></li>
-                        <li><a href="" class="all-option">All countries</a></li>
-                    </ul>
-                </div>
-                <div class="cities info-column-wrapper">
-                    <ul>
-                        <li><a href="">Chisinau</a></li>
-                        <li><a href="">Dubai</a></li>
-                        <li><a href="">Warsaw</a></li>
-                        <li><a href="">Prague</a></li>
-                        <li><a href="">Paris</a></li>
-                        <li><a href="">Frankfurt</a></li>
-                        <li><a href="" class="all-option">All cities</a></li>
-                    </ul>
-                </div>
-                <div class="destinations info-column-wrapper">
-                    <ul>
-                        <li><a href="">Chisinau - Istambul</a></li>
-                        <li><a href="">Chisinau - Antaliya</a></li>
-                        <li><a href="">Warsaw - Toronto</a></li>
-                        <li><a href="">Prague - Paris</a></li>
-                        <li><a href="">Paris - Tbilisi</a></li>
-                        <li><a href="">Frankfurt - Prague</a></li>
-                        <li><a href="" class="all-option">All destinations</a></li>
-                    </ul>
-                </div>
-                <div class="airports info-column-wrapper">
-                    <ul>
-                        <li><a href="">Vaclav Havel Airport</a></li>
-                        <li><a href="">Warsaw Chopin Airport</a></li>
-                        <li><a href="">Malpensa Milano</a></li>
-                        <li><a href="">Fiumincino Rome</a></li>
-                        <li><a href="">Charles de Gaulle Paris</a></li>
-                        <li><a href="">Frankfurt Airport</a></li>
-                        <li><a href="">All destinations</a></li>
-                    </ul>
-                </div>
-                <div class="airlines info-column-wrapper">
-                    <ul>
-                        <li><a href="">Emirates</a></li>
-                        <li><a href="">Qatar Airways</a></li>
-                        <li><a href="">Turkish Airlines</a></li>
-                        <li><a href="">Singapore Airlines</a></li>
-                        <li><a href="">Korean Air</a></li>
-                        <li><a href="">Etihad Airways</a></li>
-                        <li> <a href="" class="all-option">All Airlines</a></li>
-                    </ul>
-                </div>
-                <div class="services info-column-wrapper">
-                    <ul>
-                        <li><a href="">Airlines ratings</a></li>
-                        <li><a href="">Price comparisement</a></li>
-                        <li><a href="">Flight schedule</a></li>
-                        <li><a href="">Sales</a></li>
-                        <li><a href="">FAQ</a></li>
-                        <li><a href="">Support</a></li>
-                        <li> <a href="" class="all-option">Site map</a></li>
-                    </ul>
-                </div>
+            <div class="partner-item">
+                <img src="img/pci.svg" alt="PCI">
             </div>
-            <div class="footer-links">
-                <div class="useful-links-wrapper">
-                    <a href=""><img src="img/ttn-logo.png" alt="TTN"></a>
-                    <a href="">Partner Program</a>
-                    <a href="" class="button app-button">Google play</a>
-                    <a href="" class="button app-button">App store</a>
-                </div>
-                <div class="socials-wrapper">
-                    <a href=""><img src="img/instagram.svg" alt="Instagram"></a>
-                    <a href=""><img src="img/fb.svg" alt="FB"></a>
-                    <a href=""><img src="img/telegram.svg" alt="Telegram"></a>
-                </div>
+            <div class="partner-item">
+                <img src="img/visa.svg" alt="Visa">
             </div>
+            <div class="partner-item">
+                <img src="img/mastercard.svg" alt="Mastercard">
+            </div>
+        </div>
+        <div class="footer-info-columns-wrapper">
+            <div class="countries info-column-wrapper">
+                <ul>
+                    <li><a href="">Spain</a></li>
+                    <li><a href="">Turkey</a></li>
+                    <li><a href="">Egypt</a></li>
+                    <li><a href="">Georgia</a></li>
+                    <li><a href="">Poland</a></li>
+                    <li><a href="">France</a></li>
+                    <li><a href="" class="all-option">All countries</a></li>
+                </ul>
+            </div>
+            <div class="cities info-column-wrapper">
+                <ul>
+                    <li><a href="">Chisinau</a></li>
+                    <li><a href="">Dubai</a></li>
+                    <li><a href="">Warsaw</a></li>
+                    <li><a href="">Prague</a></li>
+                    <li><a href="">Paris</a></li>
+                    <li><a href="">Frankfurt</a></li>
+                    <li><a href="" class="all-option">All cities</a></li>
+                </ul>
+            </div>
+            <div class="destinations info-column-wrapper">
+                <ul>
+                    <li><a href="">Chisinau - Istambul</a></li>
+                    <li><a href="">Chisinau - Antaliya</a></li>
+                    <li><a href="">Warsaw - Toronto</a></li>
+                    <li><a href="">Prague - Paris</a></li>
+                    <li><a href="">Paris - Tbilisi</a></li>
+                    <li><a href="">Frankfurt - Prague</a></li>
+                    <li><a href="" class="all-option">All destinations</a></li>
+                </ul>
+            </div>
+            <div class="airports info-column-wrapper">
+                <ul>
+                    <li><a href="">Vaclav Havel Airport</a></li>
+                    <li><a href="">Warsaw Chopin Airport</a></li>
+                    <li><a href="">Malpensa Milano</a></li>
+                    <li><a href="">Fiumincino Rome</a></li>
+                    <li><a href="">Charles de Gaulle Paris</a></li>
+                    <li><a href="">Frankfurt Airport</a></li>
+                    <li><a href="">All destinations</a></li>
+                </ul>
+            </div>
+            <div class="airlines info-column-wrapper">
+                <ul>
+                    <li><a href="">Emirates</a></li>
+                    <li><a href="">Qatar Airways</a></li>
+                    <li><a href="">Turkish Airlines</a></li>
+                    <li><a href="">Singapore Airlines</a></li>
+                    <li><a href="">Korean Air</a></li>
+                    <li><a href="">Etihad Airways</a></li>
+                    <li> <a href="" class="all-option">All Airlines</a></li>
+                </ul>
+            </div>
+            <div class="services info-column-wrapper">
+                <ul>
+                    <li><a href="">Airlines ratings</a></li>
+                    <li><a href="">Price comparisement</a></li>
+                    <li><a href="">Flight schedule</a></li>
+                    <li><a href="">Sales</a></li>
+                    <li><a href="">FAQ</a></li>
+                    <li><a href="">Support</a></li>
+                    <li> <a href="" class="all-option">Site map</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-links">
+            <div class="useful-links-wrapper">
+                <a href=""><img src="img/ttn-logo.png" alt="TTN"></a>
+                <a href="">Partner Program</a>
+                <a href="" class="button app-button">Google play</a>
+                <a href="" class="button app-button">App store</a>
+            </div>
+            <div class="socials-wrapper">
+                <a href=""><img src="img/instagram.svg" alt="Instagram"></a>
+                <a href=""><img src="img/fb.svg" alt="FB"></a>
+                <a href=""><img src="img/telegram.svg" alt="Telegram"></a>
+            </div>
+        </div>
     </footer>
 </body>
 
