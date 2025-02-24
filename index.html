@@ -16,20 +16,21 @@
 <body>
     <header>
         <nav class="main-nav">
-            <ul class="button-list nav wide-nav">
+            <ul class="nav">
                 <li><a href="#">Corporate clients</a></li>
                 <li><a href="#">Flight tickets</a></li>
                 <li><a href="#">Information</a></li>
-                <li><select id="lang-picker" onchange="location = this.value;">
-                    <option id="english" value="/index.html" selected="selected">English</option>
-                    <option id="spanish" value="index.html">Spanish</option>
-                    <option id="czech" value="index.html">Czech</option>
-                    <option id="russian" value="index.html">Russian</option>
-                 </select></li>
             </ul>
-            <ul class="button-list nav mobile-nav">
-                <li><a href="#"><img src="img/lang.svg" alt="Language picker"></a></li>
-                <li><a href="#"><img src="img/menu.svg" alt="Burger menu"></a></li>
+            <ul class="nav country-picker">
+                <li class="dropdown country-picker">
+                    <ul class="dropdown-menu">
+                        <li><a href=""><span>English</span></a></li>
+                        <li><a href=""><span>Deutsch</span></a></li>
+                        <li><a href=""><span>Español</span></a></li>
+                        <li><a href=""><span>Italiano</span></a></li>
+                        <li><a href=""><span>Français</span></a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
     </header>
