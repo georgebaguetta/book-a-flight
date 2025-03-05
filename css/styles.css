@@ -276,7 +276,7 @@ h1 {
 
 .ticket-destinations::after {
   content: "";
-  background-image: url(/img/swap.svg);
+  background-image: url(../img/swap.svg);
   width: 30px;
   height: 30px;
   position: absolute;
@@ -384,14 +384,14 @@ h1 {
 }
 
 .telegram-tickets-banner {
-  background: url(/img/telegram-ru.png);
+  background: url(../img/telegram-ru.png);
   background-repeat: no-repeat;
   background-position: bottom right 10px;
   background-size: 100px;
 }
 
 .bus-ticket-banner {
-  background: url(/img/bus-light.png);
+  background: url(../img/bus-light.png);
   background-repeat: no-repeat;
   background-position: right 50%;
   background-size: 120px;
@@ -404,7 +404,7 @@ h1 {
 
 .check-info-items ul li::before {
   content: "";
-  background-image: url(/img/check-smooth.svg);
+  background-image: url(../img/check-smooth.svg);
   display: inline-block;
   width: 8px;
   height: 8px;
@@ -508,7 +508,7 @@ h1 {
   left: -14px;
   top: 2px;
   display: inline-block;
-  background-image: url(/img/star.svg);
+  background-image: url(../img/star.svg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -573,7 +573,7 @@ h1 {
 
 .subscribe .inner-section-wrapper::after {
   content: "";
-  background-image: url(/img/subscribe-laptop.svg);
+  background-image: url(../img/subscribe-laptop.svg);
   width: 70px;
   height: 70px;
   position: absolute;
@@ -700,7 +700,7 @@ footer .socials-wrapper a img {
   height: 30px;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 768px) {
+@media only screen and (min-width: 300px) and (max-width: 768px) {
   .main-nav ul.nav-wide {
     display: none;
   }
