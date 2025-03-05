@@ -53,7 +53,7 @@ header,
   margin: 0 auto;
 }
 
-.main-nav ul.nav  {
+.main-nav .nav-wide {
   display: flex;
   flex-direction: row;
   gap: 20px;
@@ -89,7 +89,11 @@ header,
 .main-nav .arrow {
   font-size: 5px;
   vertical-align: middle;
-  margin-left: 5px;  
+  margin-left: 5px;
+}
+
+.main-nav .burger-menu {
+  display: none;
 }
 
 .ticket-search {
@@ -136,6 +140,7 @@ h1 {
 }
 
 .ticket-type-list li {
+  display: flex;
   padding: 4px 20px;
   background-color: var(--purple-light);
   color: var(--white);
@@ -199,6 +204,7 @@ h1 {
   color: var(--white);
   border-radius: 10px;
   padding: 1px 6px;
+  margin-left: 3px;
 }
 
 .form-item-wrapper {
@@ -359,6 +365,7 @@ h1 {
   padding: 20px;
   box-shadow: 0 0 4px #00000030;
   border-radius: 3px;
+  background-color: var(--white);
 }
 
 .tickets-info-block .banner {
@@ -366,6 +373,7 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: var(--white);
 }
 
 .check-info-items ul {
@@ -408,6 +416,7 @@ h1 {
 .tickets-info-block .banner-button {
   padding: 10px 20px;
   background-color: var(--pink);
+  border-radius: 3px;
   text-decoration: none;
   color: var(--red);
   position: relative;
@@ -454,7 +463,7 @@ h1 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   margin-bottom: 10px;
 }
 
@@ -615,7 +624,7 @@ footer .info-columns-wrapper {
   border-bottom: 1px solid var(--grey);
 }
 
-footer .info-columns-wrapper ul li:not(:last-of-type) {
+footer .info-columns-wrapper ul li {
   margin-bottom: 0.5rem;
 }
 
@@ -628,11 +637,15 @@ footer .info-columns-wrapper ul li a:hover {
   text-decoration: underline;
 }
 
-footer .info-columns-wrapper ul li:last-of-type a {
+footer .info-columns-wrapper .all-option {
   color: var(--blue);
 }
 
-footer .info-columns-wrapper ul li:last-of-type a::after {
+footer .info-columns-wrapper .all-option .arrow {
+  display: none;
+}
+
+footer .info-columns-wrapper .all-option::after {
   content: " \2192";
 }
 
@@ -655,7 +668,6 @@ footer .useful-links-wrapper {
 }
 
 footer .useful-links-wrapper a {
-  padding: 6px 25px;
   border-radius: 5px;
   text-decoration: none;
 }
@@ -663,11 +675,18 @@ footer .useful-links-wrapper a {
 footer .useful-links-wrapper .partner-program-button {
   border: 1px solid var(--blue);
   color: var(--blue);
+  padding: 11px 30px;
+  text-align: center;
 }
 
 footer .useful-links-wrapper .app-button {
-  background-color: var(--black);
-  color: var(--white);
+  background-color: none ;
+}
+
+.useful-links-wrapper .download-app-links-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 footer .socials-wrapper {
@@ -679,4 +698,215 @@ footer .socials-wrapper {
 footer .socials-wrapper a img {
   width: 30px;
   height: 30px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .main-nav ul.nav-wide {
+    display: none;
+  }
+  .main-nav .dropdown-menu {
+    display: none;
+  }
+
+  .main-nav .arrow {
+    display: none;
+  }
+
+  .main-nav {
+    display: flex;
+    gap: 30px;
+    padding: 15px 10px;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .main-nav .burger-menu {
+    display: block;
+  }
+
+  h1 {
+    color: var(--salmon);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .inner-search-container {
+    margin: 0 10px;
+  }
+
+  .ticket-search {
+    padding: 24px 0;
+  }
+
+  .ticket-search-form {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+
+  .ticket-type-list {
+    overflow-x: auto;
+  }
+
+  .ticket-type-list li {
+    width: auto;
+  }
+
+  .ticket-type-list li a {
+    white-space: nowrap;
+  }
+
+  .form-item-wrapper {
+    border-right: none;
+  }
+
+  .form-item-wrapper:not(:last-of-type) {
+    border-bottom: 1px solid var(--grey);
+  }
+
+  .form-item-wrapper:first-of-type {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-left-radius: 0px;
+  }
+
+  .form-item-wrapper:last-of-type {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+
+  .form-item-wrapper a {
+    bottom: 0;
+    right: 20px;
+    transform: translateY(50%);
+  }
+
+  .ticket-search-form .button {
+    height: 60px;
+    margin-top: 1rem;
+    margin-left: 0;
+  }
+
+  .tickets-info-block {
+    flex-direction: column;
+    margin: 1rem 10px;
+  }
+
+  .tickets-info-block .banner {
+    width: 100%;
+    background-color: var(--white);
+  }
+
+  .tickets-info-block .check-info-items ul {
+    flex-direction: column;
+  }
+
+  .content-wrapper {
+    display: block;
+    margin: 1rem 10px;
+  }
+
+  .popular-destinations-list {
+    flex-direction: column;
+  }
+
+  .popular-destinations-list li {
+    width: 100%;
+    flex-direction: column;
+    align-items: start;
+    margin: 0;
+    border-bottom: 1px solid var(--grey);
+  }
+
+  .popular-destinations-list li .destination-direction,
+  .popular-destinations-list li .flight-price-from {
+    margin-bottom: 0.5rem;
+  }
+
+  footer {
+    margin: 1rem 10px;
+  }
+
+  .section {
+    margin-top: 1rem;
+  }
+
+  .subscribe {
+    height: 180px;
+  }
+
+  .subscribe-form input {
+    width: 85%;
+  }
+
+  .subscribe-form .button {
+    width: 15%;
+  }
+
+  footer .info-columns-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-bottom: 2rem;
+    border-bottom: none;
+  }
+
+  .info-column-wrapper ul {
+    display: none;
+  }
+
+  .info-column-wrapper:first-of-type {
+    border-top: 1px solid var(--grey);
+  }
+
+  footer .info-column-wrapper {
+    border-bottom: 1px solid var(--grey);
+    padding: 10px 0;
+    width: 100%;
+  }
+
+  footer .info-columns-wrapper .all-option {
+    color: var(--black);
+    padding-left: 10px;
+    width: 100%;
+    display: block;
+    position: relative;
+  }
+
+  footer .info-columns-wrapper .all-option::after {
+    display: none;
+  }
+
+  footer .info-column-wrapper .all-option .arrow {
+    display: inline;
+    position: absolute;
+    top: -6px;
+    right: 10px;
+    font-size: 1.5rem;
+    color: var(--grey);
+    vertical-align: middle;
+  }
+
+  footer .footer-links {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  footer .useful-links-wrapper {
+    flex-direction: column;
+  }
+
+  footer .useful-links-wrapper .partner-program-button {
+    padding: 11px 25px;
+  }
+
+  footer .socials-wrapper {
+    margin-top: 2rem;
+  }
+
+
 }
