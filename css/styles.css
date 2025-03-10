@@ -15,7 +15,7 @@
 }
 body {
   font-family: "Roboto", serif;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 main {
@@ -680,7 +680,7 @@ footer .useful-links-wrapper .partner-program-button {
 }
 
 footer .useful-links-wrapper .app-button {
-  background-color: none ;
+  background-color: none;
 }
 
 .useful-links-wrapper .download-app-links-wrapper {
@@ -907,5 +907,178 @@ footer .socials-wrapper a img {
   footer .socials-wrapper {
     margin-top: 2rem;
   }
-
 }
+
+/* START CALENDAR POPUP STYLES*/
+
+.calendar-container {
+  background: var(--white);
+  border: 0;
+  border-radius: 2px;
+  box-shadow: 0 0 10px #00000030;
+  z-index: 999;
+  padding: 1rem;
+}
+
+.calendar {
+  position: relative;
+}
+
+.calendar-header {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  margin-bottom: 1.6em;
+}
+
+.calendar-date-control {
+  background: color(srgb 0.9862 0.9215 0.9456);
+  border: none;
+  border-radius: 5px;
+  color: var(--red);
+  font-size: 87.5%;
+  line-height: 2.5rem;
+  width: 100%;
+}
+
+.calendar-month-control {
+  background: transparent;
+  border: 0;
+  position: absolute;
+  font-size: 0;
+  
+}
+
+.calendar-month-control::before {
+  font-size: 16px;
+  color: #bbb;
+}
+
+.calendar-month-control-fwd {
+  right: 0;
+}
+
+.calendar-month-control-fwd::before {
+  content: ">";
+}
+
+.calendar-month-control-rev {
+  left: 0;
+}
+
+.calendar-month-control-rev::before {
+  content: "<";
+}
+
+.calendar-month-name {
+  font-size: 87.5%;
+  text-align: center;
+  line-height: 2em;
+  white-space: nowrap;
+}
+
+.calendar-dates {
+  align-items: flex-start;
+  display: flex;
+  gap: 25px;
+}
+
+.calendar-month-date-names,
+.calendar-month-date-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar-month-date-days {
+  gap: 0.4rem 0;
+}
+
+.calendar-month-date-days li,
+.calendar-month-date-names li {
+  line-height: 2.6rem;
+  text-align: center;
+  min-width: 3rem;
+  font-size: 87.5%;
+}
+
+.calendar-month-date-names li {
+  font-size: 75%; 
+  color: #666;
+  font-weight: 500;
+}
+
+.calendar-month-dates-day-past {
+  color: #ccc;
+}
+
+.calendar-month-dates-day-today {
+  background-color: #ccc;
+}
+
+.calendar-month-dates-day-today,
+.calendar-month-dates-day-to,
+.calendar-month-dates-day-from {
+  position: relative;
+  border-radius: 0 0 5px 5px;
+}
+
+.calendar-month-dates-day-today::before,
+.calendar-month-dates-day-to::before,
+.calendar-month-dates-day-from::before {
+  border-radius: 5px 5px 0 0 ;
+  position: absolute;
+  font-size: 60%;
+  text-transform: lowercase;
+  left: 0;
+  right: 0;
+  line-height: 1.5;
+  bottom: 100%;
+}
+
+.calendar-month-dates-day-today::before {
+  content: "Today";
+  text-transform: lowercase;
+}
+
+.calendar-month-dates-day-from::before {
+  content: "There";
+  text-transform: lowercase;
+}
+
+.calendar-month-dates-day-from::before,
+.calendar-month-dates-day-to::before {
+  background: color(srgb 0.926 0.3556 0.4567);
+  color: #fff;
+}
+
+.calendar-month-dates-day-today::before {
+  background: #ccc;
+  color: #fff;
+}
+
+.calendar-month-dates-day-to::before {
+  content: "Back";
+  text-transform: lowercase;
+}
+
+.calendar-month-dates-day-from,
+.calendar-month-dates-day-to {
+  background: color(srgb 0.926 0.3556 0.4567);
+  color: var(--white);
+}  
+
+.calendar-month-dates-day-in-range {
+  background: rgba(254, 234, 246, 1);
+}
+
+.calendar-note {
+  color: #3b3b3b;
+  font-size: 75%;
+  margin-top: 1rem
+}
+
+.calendar-note::before {
+  content: "👉";
+  margin-right: 0.5rem;
+}
+
+/* END CALENDAR POPUP STYLES*/
